@@ -1,0 +1,59 @@
+
+
+
+
+
+<form action="https://checkout.flutterwave.com/v3/hosted/pay" method="post" class="wpcf7-form init cf7skins cf7t-registration cf7s-pina-colada" novalidate="novalidate" data-status="init">
+
+
+
+
+<fieldset>
+<legend>
+<h2 style="text-align: center;"><span style="color: #99cc00; font-family: impact, sans-serif;">Hilltop Encounters 2022 Registration Payment</span></h2>
+</legend>
+<ol>
+<li><label for="your-amount"> Amount <em class="cf7s-reqd">*</em> </label><span class="wpcf7-form-control-wrap" data-name="your-name">
+<input type="number" name="amount"  id="amount-entered"  value="" min="1000" step="500"  placeholder="1000"required/>
+<script>
+document.getElementById('amount-entered').onkeypress =
+  function (e) {
+    var ev = e || window.event;
+    if(ev.charCode < 1000 || ev.charCode > 1000000) {
+      return false; // not a digit
+    } else if(this.value * 10 + ev.charCode - 1000000 > this.max) {
+       return false;
+    } else {
+       return true;
+    }
+  }
+</script>
+
+</span> </li>
+
+<li><label for="your-name"> Full Name <em class="cf7s-reqd">*</em> </label><span class="wpcf7-form-control-wrap" data-name="your-name">
+<input type="text" name="customer[name]" value="" placeholder="John Kolawale"/></span> </li>
+<li><label for="PhoneNumber"> Phone Number <em class="cf7s-reqd">*</em> </label><span class="wpcf7-form-control-wrap" data-name="PhoneNumber">
+  <input type="tel" name="customer[phone]" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" id="PhoneNumber" aria-required="true" aria-invalid="false" placeholder="08030000000"></span></li>
+<li><label for="your-email"> Valid Email <em class="cf7s-reqd">*</em> </label><span class="wpcf7-form-control-wrap" data-name="your-email">
+<input type="email" name="customer[email]" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" id="your-email" aria-required="true" aria-invalid="false" placeholder="johnkolawale@email.com"></span> </li>
+<input type="hidden" name="public_key" value="FLWPUBK-84be0182e5a0739d9cf5588d0dd84426-X" />
+<input type="hidden" name="tx_ref" value="bitethtx-019203" />
+<input type="hidden" name="currency" value="NGN" />
+<input type="hidden" name="meta[token]" value="54" />
+<input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" />
+
+</ol>
+<legend>
+<p style="text-align: center;"><span>
+<button type="submit" id="start-payment-button" class="wpcf7-form-control has-spinner wpcf7-submit">Pay Now</button>
+  <span class="wpcf7-spinner"></span></span></p>
+</legend>
+</fieldset>
+<p><span style="color: #800000;"><em>After Payment you will get your hostel and your Conference Slip</em></span></p>
+<div class="wpcf7-response-output" aria-hidden="true"></div>
+
+
+
+
+</form>
